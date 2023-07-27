@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('photo-1439436556258-1f7fab1bfd4f.jpg');
+            background-size: cover;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            text-decoration: none;
+            margin: 5px;
+            padding: 50px;
+            font-size: 33px;
+            color: darkmagenta;
+        }
+        li a:hover{color: rgb(255, 0, 0);
+        }
+
+        li a{
+            text-decoration: none;
+        }
+        li{
+            float: left;
+        }
+        img{
+            margin-top: 8%;
+            margin-left: 8%;
+        }
+    </style>
+</head>
+<body>
+   <center> <h1>Top 10 Songs</h1></center>
+
+
+    <ul>
+        <li><a href="songs">Songs</a></li>
+        <li><a href="search">Search</a></li>
+        <li><a href="languages">Languages</a></li>
+        <li><a href="favorite">Favorite</a></li>
+    </ul><br>
+    <center> <img src="play.png"
+        width="70px" height="70px" id="icon"></center>
+        <audio id="mysound">
+        <source src="The_Life_Of_Ram-MassTamilan.com.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var mysound = document.getElementById("mysound");
+            var icon = document.getElementById("icon");
+            icon.onclick = function() {
+                    if (mysound.paused) {
+                        mysound.play();
+                        icon.src = "pause.png";
+                    } else {
+                        mysound.pause();
+                        icon.src = "play.png";
+                    }
+                }
+        </script>
+     
+     
+     
+</body>
+</html>
